@@ -1,17 +1,24 @@
-<div style="height: 100vh;">
-    <mat-toolbar class="toolbar">
-     <a mat-button> <span class="mm-container">Mohamed Mamdouh</span> </a>
+
+<div class="main-container">
   
+  
+
+    <mat-toolbar style="position: relative"  [ngClass]="{'toolbarOpacity': (navService.getHeaderOpacity$() | async) === true, 'toolbar':(navService.getHeaderOpacity$() | async) === false }">
+      <div class="stars-wrappers" *ngIf="(navService.getHeaderOpacity$() | async) === true">
+      <div id='stars'></div>
+     <div id='stars2'></div>
+     <div id='stars3'></div>
+    </div>
+      <a mat-button> <span class="mm-container">Mohamed Mamdouh</span> </a>
+   
       <span class="example-spacer"></span>
   <div class="menu-items-lg">
       <div fxShow="true" fxHide.lt-md="true">
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-        <a class="menu-item-lg" href="#" mat-button>Menu Item 1</a>
-        <a class="menu-item-lg" href="#" mat-button>Menu Item 2</a>
-        <a class="menu-item-lg" href="#" mat-button>Menu Item 3</a>
-        <a class="menu-item-lg" href="#" mat-button>Menu Item 3</a>
-
-      
+        <a class="menu-item-lg"  mat-button>Home</a>
+        <a class="menu-item-lg"  mat-button>About</a>
+        <a class="menu-item-lg"  mat-button>Portofolio</a>
+        <a class="menu-item-lg"  mat-button>Hire me</a>
       </div>
     </div>
       <div class="show-side-menu-btn" fxShow="true" fxHide.gt-sm="true">
@@ -34,6 +41,10 @@
           <a href="#" mat-button>Menu Item 6</a>
         </div>
       </mat-sidenav>
-      <mat-sidenav-content fxFlexFill><ng-content></ng-content></mat-sidenav-content>
+      <mat-sidenav-content fxFlexFill>
+
+        <ng-content></ng-content>
+
+    </mat-sidenav-content>
     </mat-sidenav-container>
   </div>

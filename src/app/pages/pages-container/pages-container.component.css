@@ -1,0 +1,55 @@
+
+
+.main-container {
+    width: 100vw;
+    height:calc(100vh - 75px);
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 10px; */
+    margin-bottom: 10px;
+    /* border: 2px solid #333; */
+    overflow-y: auto;
+    position: relative;
+  }
+.wrapper{
+
+}
+  .element {
+    width: 100%;
+    height:calc(100vh - 75px);
+    scroll-margin: 10px;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .element:nth-child(1) {
+    background: rgb(44,45,53);
+    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  }
+  app-home{
+    width:100%;
+  }
+  .element:nth-child(2) {
+    background: #ee6620;
+  }
+  .element:nth-child(3) {
+    background: #777ba0;
+  }
+  .element:nth-child(4) {
+    background: #da1e62;
+  }
+  
+  
+  
+  .y-mandatory {
+    scroll-snap-type: y mandatory;
+  }
+  
+.y-scroll .element {
+  margin-bottom: 10px;
+}
+/* https://css-tricks.com/almanac/properties/s/scroll-snap-type/ */

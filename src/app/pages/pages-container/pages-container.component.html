@@ -1,0 +1,33 @@
+<!-- <div class="main-container">
+<div class="home child">
+    <button (click)="goTo()">scroll</button>
+    <app-home></app-home>
+
+</div>
+<div class="about child">
+<div id="abouts">
+    das
+</div>
+<app-about></app-about>
+</div>
+</div> -->
+
+
+<div (scroll)="onScroll($event)" class="main-container y-scroll y-mandatory">
+    <div class="wrapper">
+
+        <div class="home element">
+            <app-home></app-home>    
+        </div>
+        <div class="about element">
+            <app-about></app-about>
+        </div>
+        <div class="portofolio element">
+            <app-portofolio></app-portofolio>
+        </div>
+        <div class="portofolio element">
+            <app-contact></app-contact>
+        </div>
+
+    </div>  
+</div>
