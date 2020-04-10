@@ -17,7 +17,7 @@
   .element {
     width: 100%;
     height:calc(100vh - 75px);
-    scroll-margin: 10px;
+    /* scroll-margin: 10px; */
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     color: white;
@@ -27,20 +27,20 @@
     align-items: center;
   }
   .element:nth-child(1) {
-    background: rgb(44,45,53);
+    /* background: rgb(44,45,53); */
     /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
   }
-  app-home{
+  app-home, app-about, app-contact{
     width:100%;
   }
   .element:nth-child(2) {
-    background: #ee6620;
+    background: #ffffff;
   }
   .element:nth-child(3) {
-    background: #777ba0;
+    /* background: #777ba0; */
   }
   .element:nth-child(4) {
-    background: #da1e62;
+    background-color: rgb(44,45,53);
   }
   
   

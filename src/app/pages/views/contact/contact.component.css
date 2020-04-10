@@ -1,0 +1,109 @@
+.container{
+    /* border:2px red dashed; */
+    height:calc(100vh - 75px);
+    width:100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 901px) {
+   
+    .wrapper{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+          #title{
+              font-size: 25px;
+              color:rgba(255, 255, 255, 0.452);
+              font-family: 'Open Sans', sans-serif;
+              letter-spacing: 5px;
+              margin-top: 90px;
+            }
+
+            mat-form-field{
+                width:50%;
+                font-size: 15px;
+                background-color: rgba(122, 123, 131, 0.123);
+
+            }      
+            mat-label{
+                color:rgb(124, 117, 117)
+            }
+            .content{
+                height: 25vh
+                /* background-color: rgba(122, 123, 131, 0.123); */
+            }
+            .form-container{
+                margin-top: 45px;
+            }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .wrapper{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+
+
+    }
+          #title{
+            margin-top: 40px;
+
+              font-size: 25px;
+              color:rgba(255, 255, 255, 0.452);
+              font-family: 'Open Sans', sans-serif;
+              letter-spacing: 5px;
+            }
+            mat-form-field{
+                width:50%;
+                font-size: 15px;
+                background-color: rgba(122, 123, 131, 0.123);
+
+            }      
+            mat-label{
+                color:rgb(124, 117, 117)
+            }
+            .content{
+                height: 25vh;
+                /* background-color: rgba(122, 123, 131, 0.123); */
+            }
+            .form-container{
+                margin-top: 45px;
+            } 
+  }   
+
+  @media screen and (max-width: 650px) {
+    .wrapper{
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+
+
+    }
+          #title{
+            margin-top: 30px;
+
+              font-size: 25px;
+              color:rgba(255, 255, 255, 0.452);
+              font-family: 'Open Sans', sans-serif;
+              letter-spacing: 5px;
+            }
+            mat-form-field{
+                width:90%;
+                font-size: 15px;
+                background-color: rgba(122, 123, 131, 0.123);
+
+            }      
+            mat-label{
+                color:rgb(124, 117, 117)
+            }
+            .content{
+                height: 25vh;
+                /* background-color: rgba(122, 123, 131, 0.123); */
+            }
+            .form-container{
+                margin-top: 45px;
+            }
+          
+      }   

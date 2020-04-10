@@ -8,7 +8,11 @@ import { NavService } from 'src/app/core/nav.service';
 })
 export class PagesContainerComponent implements OnInit,AfterViewInit {
   constructor(private navService: NavService) { }
-
+  @ViewChild("about") aboutElement; 
+ homeOffset;
+ aboutOffset;
+ portofolioOffset;
+ contactOffset; 
   @ViewChild("abouts") MyProp: ElementRef;
   @HostListener("window:scroll", ["$event"])
   onScroll(event) {
@@ -17,19 +21,33 @@ export class PagesContainerComponent implements OnInit,AfterViewInit {
        return
            }
        this.navService.setHeaderOpacity(false)
-  }
-
-  ngOnInit(): void {
-   
-  }
-  ngAfterViewInit(){
+    
+     
 
     
+    }
+    action(event : any) {
+      //do something with the element
+      
+}
+
+  
+  ngOnInit(): void {
+    this.navService.getCurrentSection$().subscribe(sectionName=>{
+      this.goTo(sectionName)
+    })
+
   }
-  goTo(){
+  ngAfterViewInit(){
+    console.log(this.aboutOffset)
 
-    document.getElementById("abouts").scrollIntoView({ behavior: "smooth", block: "start",inline: "nearest" });
-    // window.scroll({ top: 99, behavior: "smooth" });
+     this.homeOffset = document.getElementById('home').getBoundingClientRect();
+     this.aboutOffset = document.getElementById('about').getBoundingClientRect();
+     this.portofolioOffset = document.getElementById('portofolio').getBoundingClientRect();
+     this.contactOffset = document.getElementById('contact').getBoundingClientRect();
 
+  }
+  goTo(sectionName: string){
+    document.getElementById(sectionName).scrollIntoView({ behavior: "smooth", block: "start",inline: "nearest" });
   }
 }

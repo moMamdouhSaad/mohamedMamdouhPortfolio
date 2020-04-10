@@ -16,16 +16,16 @@
 <div (scroll)="onScroll($event)" class="main-container y-scroll y-mandatory">
     <div class="wrapper">
 
-        <div class="home element">
+        <div inViewport (inViewportAction)="action($event)"  id="home" class="home element">
             <app-home></app-home>    
         </div>
-        <div class="about element">
+        <div inViewport (inViewportAction)="action($event)" id="about"  class="about element">
             <app-about></app-about>
         </div>
-        <div class="portofolio element">
+        <div inViewport (inViewportAction)="action($event)" id="portofolio" class="portofolio element">
             <app-portofolio></app-portofolio>
         </div>
-        <div class="portofolio element">
+        <div inViewport (inViewportAction)="action($event)" id="contact"  class="contact element">
             <app-contact></app-contact>
         </div>
 

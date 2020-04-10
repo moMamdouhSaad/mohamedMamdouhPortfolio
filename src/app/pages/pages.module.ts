@@ -7,6 +7,8 @@ import { AboutComponent } from '../pages/views/about/about.component';
 import { PortofolioComponent } from '../pages/views/portofolio/portofolio.component';
 import { ContactComponent } from '../pages/views/contact/contact.component';
 import { MaterialsModule } from '../materials.module';
+import { InViewportModule } from 'ng-in-viewport';
+
 
 
 
@@ -15,7 +17,8 @@ import { MaterialsModule } from '../materials.module';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    MaterialsModule
+    MaterialsModule,
+    InViewportModule
   ],
   exports:[PagesContainerComponent,PagesRoutingModule]
 })
