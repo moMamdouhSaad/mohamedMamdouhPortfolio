@@ -1,8 +1,5 @@
 
 <div class="main-container">
-  
-  
-
     <mat-toolbar style="position: relative"  [ngClass]="{'toolbarOpacity': (navService.getHeaderOpacity$() | async) === true, 'toolbar':(navService.getHeaderOpacity$() | async) === false }">
       <div class="stars-wrappers" *ngIf="(navService.getHeaderOpacity$() | async) === true">
       <div id='stars'></div>
@@ -41,13 +38,12 @@
     <mat-sidenav-container fxFlexFill class="example-container">
       <mat-sidenav #sidenav fxLayout="column" class="mobile-side-nav">
         <div fxLayout="column" >
-          <a (click)="sidenav.toggle()" href="#" mat-button>Close</a>
-          <a href="#" mat-button>Menu Item 1</a>
-          <a href="#" mat-button>Menu Item 2</a>
-          <a href="#" mat-button>Menu Item 3</a>
-          <a href="#" mat-button>Menu Item 4</a>
-          <a href="#" mat-button>Menu Item 5</a>
-          <a href="#" mat-button>Menu Item 6</a>
+          <a (click)="sidenav.toggle()" routerLink="/" mat-button>Close</a>
+          <a (click)="navService.setCurrentSection('home')" mat-button>Home</a>
+          <a (click)="navService.setCurrentSection('about')" mat-button>About</a>
+          <a (click)="navService.setCurrentSection('portofolio')" mat-button>Portofolio</a>
+          <a (click)="navService.setCurrentSection('contact')" mat-button>Contact</a>
+          
         </div>
       </mat-sidenav>
       <mat-sidenav-content fxFlexFill>

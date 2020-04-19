@@ -2,7 +2,7 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 html, body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(20, 18, 18);
     height: 100vh;
     margin: 0;
     padding: 0;    
@@ -45,6 +45,6 @@ a{
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: rgb(190, 190, 190); 
   }
 }

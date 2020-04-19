@@ -61,7 +61,8 @@ export class PagesContainerComponent implements OnInit,AfterViewInit {
   ngOnInit(): void {
     this.navService.getCurrentSection$().subscribe(sectionName=>{
       this.goTo(sectionName)
-    })
+    });
+    
     this.api.getAllProjects().subscribe(data=>this.projects = data)
   }
   ngAfterViewInit(){
@@ -71,7 +72,7 @@ export class PagesContainerComponent implements OnInit,AfterViewInit {
    this.contactOffset = document.getElementById('contact').offsetTop;
   }
   goTo(sectionName: string){
-    document.getElementById(sectionName).scrollIntoView({ behavior: "smooth", block: "start",inline: "nearest" });
+    document.getElementById(sectionName).scrollIntoView({  block: "nearest",inline: "start" });
   }
 
   newMail(value){

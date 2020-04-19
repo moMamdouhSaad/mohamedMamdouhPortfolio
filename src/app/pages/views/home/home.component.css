@@ -3,7 +3,7 @@
 .main {
         width:100%;
         height:calc(100vh - 75px);
-        background: radial-gradient(ellipse at bottom, #171717 0%, #090a0f 100%);
+        background: radial-gradient(ellipse at bottom, #1e0252 0%, #000000 100%);
         /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
 
         overflow: hidden;
