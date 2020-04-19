@@ -2,22 +2,31 @@
 <div class="wrapper">
 <div id="title"><p>Contact</p></div>
 <div class="form-container">
+  <form [formGroup]="contactFormGroup" #formDirective="ngForm" >
 <mat-form-field>
     <mat-label>Email address</mat-label>
-    <textarea matInput placeholder="mm@gmail.com"></textarea>
+    <textarea formControlName="email" matInput placeholder="mm@gmail.com"></textarea>
+    <mat-error *ngIf="contactFormGroup.get('email').invalid">Email invalid</mat-error>
   </mat-form-field>
   <br>
+  <br>
+
     <mat-form-field >
       <mat-label>Subject</mat-label>
-      <textarea matInput placeholder=""></textarea>
+      <textarea formControlName="subject" matInput placeholder=""></textarea>
+      <mat-error *ngIf="contactFormGroup.get('subject').invalid">Subject invalid</mat-error>
     </mat-form-field>
+<br>
 <br>
     <mat-form-field >
         <mat-label>Content</mat-label>
-        <textarea class="content" matInput placeholder=""></textarea>
+        <textarea formControlName="content" class="content" matInput placeholder=""></textarea>
+        <mat-error *ngIf="contactFormGroup.get('content').invalid">Content invalid</mat-error>
       </mat-form-field>
       <br>
-      <button mat-button> Submit form</button>
-    </div>
+      <button (click)="submitContact()" mat-button> Submit form</button>
+
+    </form> 
+</div>
 </div>
 </div>

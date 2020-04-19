@@ -1,0 +1,18 @@
+
+<div class="projectlist-wrapper">
+
+    <button (click)="openAddDialog()" mat-button> Add new project </button>
+
+
+<ng-container *ngFor=" let project of projects ">
+    <div style="display:table">
+        <span style="display:table-cell;vertical-align:middle">  {{ project.title }} </span>
+        <span class="btns-wrapper">
+            <button (click)="openEditDialog(project)" mat-button> Edit </button>
+            <button (click)="deleteProject(project._id)" mat-button> Delete </button>
+        </span>
+    </div>
+</ng-container>
+    
+
+</div>

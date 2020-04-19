@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <form class="form-container" [formGroup]="editFormGroup">
+        <mat-form-field>
+            <mat-label>Project Title</mat-label>
+            <textarea matInput formControlName='title' placeholder="example projct"></textarea>
+          </mat-form-field>
+          <br>
+            
+                <input  (change)="fileChange($event)" type="file">
+
+            
+        <br>
+            <mat-form-field >
+                <mat-label>Description</mat-label>
+                <textarea style="height:250px" formControlName='description' class="content" matInput placeholder="">
+               
+
+                </textarea>
+              </mat-form-field>
+              <br>
+              <button (click)="submitEditForm()" mat-button> Submit form</button>
+            </form>
+</div>

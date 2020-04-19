@@ -23,10 +23,10 @@
             <app-about></app-about>
         </div>
         <div inViewport (inViewportAction)="action($event)" id="portofolio" class="portofolio element">
-            <app-portofolio></app-portofolio>
+            <app-portofolio [projects]="projects"></app-portofolio>
         </div>
         <div inViewport (inViewportAction)="action($event)" id="contact"  class="contact element">
-            <app-contact></app-contact>
+            <app-contact #contact (onContactFormSubmit)="newMail($event)"  ></app-contact>
         </div>
 
     </div>  

@@ -1,0 +1,23 @@
+
+<div class="maillist-wrapper">
+<mat-accordion>
+  <mat-expansion-panel *ngFor='let mail of mails'>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ mail.subject }}
+          </mat-panel-title>
+      <mat-panel-description>
+        {{ mail.email }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    {{ mail.content }}
+
+
+   
+    <button (click)="deleteEmail(mail._id)" mat-button> Delete </button>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+  
+</div>

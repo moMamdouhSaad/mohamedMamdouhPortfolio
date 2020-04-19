@@ -9,28 +9,25 @@
      <div id='stars2'></div>
      <div id='stars3'></div>
     </div>
-      <a mat-button> <span (click)="navService.goToSection('home')" class="mm-container">Mohamed Mamdouh</span> </a>
+      <a mat-button> <span (click)="navService.setCurrentSection('home')" class="mm-container">Mohamed Mamdouh</span> </a>
    
       <span class="example-spacer"></span>
   <div class="menu-items-lg">
-      <div fxShow="true" fxHide.lt-md="true">
-        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-
-        
+      <div fxShow="true" fxHide.lt-md="true">        
         <a 
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='home' ,'selected-section': (navService.getCurrentSection$() | async) =='home'}" 
-        (click)="navService.goToSection('home')" mat-button >Home</a>
+        (click)="navService.setCurrentSection('home')" mat-button >Home</a>
         <a 
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='about' ,'selected-section': (navService.getCurrentSection$() | async) =='about'}" 
-         (click)="navService.goToSection('about')" mat-button>About</a>
+         (click)="navService.setCurrentSection('about')" mat-button>About</a>
 
         <a
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='portofolio' ,'selected-section': (navService.getCurrentSection$() | async) =='portofolio'}" 
-         (click)="navService.goToSection('portofolio')"  mat-button>Portofolio</a>
+         (click)="navService.setCurrentSection('portofolio')"  mat-button>Portofolio</a>
 
         <a 
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='contact' ,'selected-section': (navService.getCurrentSection$() | async) =='contact'}" 
-         (click)="navService.goToSection('contact')"  mat-button>Hire me</a>
+         (click)="navService.setCurrentSection('contact')"  mat-button>Hire me</a>
       </div>
     </div>
       <div class="show-side-menu-btn" fxShow="true" fxHide.gt-sm="true">

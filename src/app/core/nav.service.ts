@@ -17,7 +17,7 @@ export class NavService {
     return this.headerOpacity.asObservable();
   }
 
-  goToSection(sectionName: string){
+  setCurrentSection(sectionName: string){
     this.currentSection.next(sectionName)
   }
   getCurrentSection$(){

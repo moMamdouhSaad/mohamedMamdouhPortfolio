@@ -1,15 +1,17 @@
 .menu-items-lg{
     text-align:center;
     width:100%;
-
 }
 .nav-section{
   font-family: "Lucida Console", Courier, monospace;
+  font-size: 20px;
 
 }
 .selected-section{
   font-family: "Lucida Console", Courier, monospace;
   background-color: rgb(46, 46, 46);
+  font-size: 20px;
+
 }
 
 .toolbar{

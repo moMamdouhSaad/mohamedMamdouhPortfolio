@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-portofolio',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortofolioComponent implements OnInit {
 
+ @Input() projects: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(()=>{
+      console.log(this.projects)
+    },1500)
   }
 
 }

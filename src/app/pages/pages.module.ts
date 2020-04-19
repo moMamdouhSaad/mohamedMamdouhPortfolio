@@ -8,17 +8,21 @@ import { PortofolioComponent } from '../pages/views/portofolio/portofolio.compon
 import { ContactComponent } from '../pages/views/contact/contact.component';
 import { MaterialsModule } from '../materials.module';
 import { InViewportModule } from 'ng-in-viewport';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SnackBarComponent } from '../pages/views/snack-bar/snack-bar.component';
 
 
 
 
 @NgModule({
-  declarations: [PagesContainerComponent, HomeComponent, AboutComponent, PortofolioComponent, ContactComponent],
+  declarations: [PagesContainerComponent, HomeComponent, AboutComponent, PortofolioComponent, ContactComponent, SnackBarComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
     MaterialsModule,
-    InViewportModule
+    InViewportModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[PagesContainerComponent,PagesRoutingModule]
 })

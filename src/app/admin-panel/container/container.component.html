@@ -1,0 +1,14 @@
+<div class="comp-wrapper">
+
+<div class="container">
+
+    <app-admin-panel-header></app-admin-panel-header>
+     
+
+    <app-projects-list *ngIf="(headerService.getCurrentView$() | async) == 'projects' "></app-projects-list>
+    <app-mails-list *ngIf="(headerService.getCurrentView$() | async) == 'mails' "></app-mails-list>        
+
+
+</div>
+
+</div>
