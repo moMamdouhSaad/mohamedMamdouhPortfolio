@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:prod:shell": "ng run mohamedMamdouh:app-shell:production",
+    "prod": "npm run build:prod:shell && cd dist/mohamedMamdouh/browser && http-server -p 8081 -c-1 "
+    
   },
   "private": true,
   "dependencies": {
@@ -21,6 +24,7 @@
     "@angular/material": "^9.2.0",
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
+    "@angular/platform-server": "~9.1.0",
     "@angular/router": "~9.1.0",
     "@angular/service-worker": "~9.1.0",
     "bootstrap": "^4.4.1",
