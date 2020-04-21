@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  private url = "http://localhost:4000/api/"
+  private url = "http://192.168.1.19:80/api/"
   constructor(private http: HttpClient) { }
 
   newMail(mail):Observable<any>{
