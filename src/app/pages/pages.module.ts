@@ -10,20 +10,24 @@ import { MaterialsModule } from '../materials.module';
 import { InViewportModule } from 'ng-in-viewport';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SnackBarComponent } from '../pages/views/snack-bar/snack-bar.component';
+import { ProjectContainerComponent } from './project-container/project-container.component';
+import { RouterModule } from '@angular/router';
 
 
 
 
 @NgModule({
-  declarations: [PagesContainerComponent, HomeComponent, AboutComponent, PortofolioComponent, ContactComponent, SnackBarComponent],
+  declarations: [PagesContainerComponent, HomeComponent, AboutComponent, PortofolioComponent, ContactComponent, SnackBarComponent, ProjectContainerComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
+    RouterModule,
     MaterialsModule,
     InViewportModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
-  exports:[PagesContainerComponent,PagesRoutingModule]
+  exports:[PagesContainerComponent,PagesRoutingModule,]
 })
 export class PagesModule { }

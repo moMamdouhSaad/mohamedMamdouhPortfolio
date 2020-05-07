@@ -1,0 +1,30 @@
+
+
+<div class='container'>
+  
+    <div class='row'>
+        <div id='title-wrapper'>
+           <p id='project-title'> {{project?.title}} </p> 
+        </div>
+    </div>
+
+   <div class='row'>
+
+      <div id='description-wrapper'>
+
+        <p id='project-description'>
+            {{project?.description}} 
+        </p>
+
+      </div>
+
+   </div> 
+
+   <div class='row'>
+       <div id='imgs-wrapper'>
+        <img src='http://localhost:80/uploads/{{imgPath}}' *ngFor='let imgPath of project?.project_imgs_paths'/>
+       </div>
+   </div>
+
+
+</div>

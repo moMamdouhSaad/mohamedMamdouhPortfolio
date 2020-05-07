@@ -1,11 +1,14 @@
 
-<ng-container *ngIf='!isAdminPanel'>
+<ng-container  *ngIf='!isAdminPanel'>
 <app-nav>
-    <router-outlet></router-outlet>
+    <div [@routeAnimations]="o && o.activatedRouteData 
+    && o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+</div>
 </app-nav>
 </ng-container>
 
-<ng-container *ngIf="isAdminPanel">
+<div *ngIf="isAdminPanel">
     <router-outlet></router-outlet>
-</ng-container>
+</div>
 

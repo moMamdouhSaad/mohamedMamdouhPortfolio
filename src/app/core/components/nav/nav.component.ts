@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavService } from '../../nav.service';
+import { LoaderService } from '../../loader.service';
+import { LoaderState } from 'src/app/interfaces/loader-state';
 
 @Component({
   selector: 'app-nav',
@@ -7,10 +9,15 @@ import { NavService } from '../../nav.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  constructor(public navService: NavService) { }
+  show:boolean;
+  constructor(public navService: NavService, private loaderService: LoaderService) { }
 
   ngOnInit(): void {
+    this.show = false;
+    this.loaderService.loaderState.subscribe((loaderState: LoaderState)=>{
+      this.show = loaderState.show;
+    })
+    
   }
 
 }

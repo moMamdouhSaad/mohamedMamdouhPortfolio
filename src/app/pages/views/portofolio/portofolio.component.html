@@ -3,11 +3,11 @@
         <div id="title"><p>Portofolio</p></div>
         
         <div class="row" >
-            <div *ngFor = ' let project of projects' class="column">
+            <div style='cursor: pointer;' [routerLink]="['/project/'+ project._id]" *ngFor = 'let project of projects' class="column">
               <div class="content">
-                <img src="http://192.168.1.19:80/uploads/{{project. mainimg_path}}" alt="Mountains" style="width:100%">
-                <h3>{{project.title}}</h3>
-                <p>{{project.description}}</p>
+                <img src="http://localhost:80/uploads/{{project.mainimg_path}}" alt="Mountains" style="width:100%">
+                <h3> {{project.title}} </h3>
+                <p> {{project.description}} </p>
               </div>
             </div>
            

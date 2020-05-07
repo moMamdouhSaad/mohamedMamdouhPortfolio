@@ -66,10 +66,10 @@ export class PagesContainerComponent implements OnInit,AfterViewInit {
     this.api.getAllProjects().subscribe(data=>this.projects = data)
   }
   ngAfterViewInit(){
-   this.homeOffset = document.getElementById('home').offsetTop;
-   this.aboutOffset = document.getElementById('about').offsetTop;   
-   this.portofolioOffset = document.getElementById('portofolio').offsetTop;
-   this.contactOffset = document.getElementById('contact').offsetTop;
+  //  this.homeOffset = document.getElementById('home').offsetTop;
+  //  this.aboutOffset = document.getElementById('about').offsetTop;   
+  //  this.portofolioOffset = document.getElementById('portofolio').offsetTop;
+  //  this.contactOffset = document.getElementById('contact').offsetTop;
   }
   goTo(sectionName: string){
     document.getElementById(sectionName).scrollIntoView({  block: "nearest",inline: "start" });

@@ -7,6 +7,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 
 @NgModule({
@@ -18,8 +20,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
         MatMenuModule,
         MatDialogModule,
         MatExpansionModule,
-        MatSnackBarModule
+        MatSnackBarModule,
+        MatProgressBarModule
       ],
-      exports:[MatToolbarModule, MatSidenavModule, MatButtonModule, MatInputModule, MatMenuModule, MatDialogModule, MatExpansionModule, MatSnackBarModule]
+      exports:[MatToolbarModule, MatSidenavModule,MatProgressBarModule,
+         MatButtonModule,
+         MatInputModule, MatMenuModule, MatDialogModule,
+         MatExpansionModule, MatSnackBarModule]
 })
 export class MaterialsModule{}

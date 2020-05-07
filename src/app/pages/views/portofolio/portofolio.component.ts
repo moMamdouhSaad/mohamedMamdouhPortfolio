@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from 'src/app/admin-panel/services/api.service';
 
 @Component({
   selector: 'app-portofolio',
@@ -9,12 +10,11 @@ export class PortofolioComponent implements OnInit {
 
  @Input() projects: any;
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    setTimeout(()=>{
-      console.log(this.projects)
-    },1500)
+    this.api.getAllProjects().subscribe(data=>this.projects = data)
+
   }
 
 }

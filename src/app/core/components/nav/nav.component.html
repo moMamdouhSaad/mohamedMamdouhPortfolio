@@ -1,3 +1,4 @@
+<mat-progress-bar mode="indeterminate" *ngIf='show'></mat-progress-bar>
 
 <div class="main-container">
     <mat-toolbar style="position: relative"  [ngClass]="{'toolbarOpacity': (navService.getHeaderOpacity$() | async) === true, 'toolbar':(navService.getHeaderOpacity$() | async) === false }">
@@ -6,23 +7,26 @@
      <div id='stars2'></div>
      <div id='stars3'></div>
     </div>
-      <a mat-button> <span (click)="navService.setCurrentSection('home')" class="mm-container">Mohamed Mamdouh</span> </a>
+      <a  mat-button>
+         <span [routerLink]="['/home']" 
+         (click)="navService.setCurrentSection('home')" class="mm-container"> Mohamed Mamdsouh </span> </a>
    
       <span class="example-spacer"></span>
   <div class="menu-items-lg">
       <div fxShow="true" fxHide.lt-md="true">        
-        <a 
+        <a [routerLink]="['/home']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='home' ,'selected-section': (navService.getCurrentSection$() | async) =='home'}" 
-        (click)="navService.setCurrentSection('home')" mat-button >Home</a>
-        <a 
+        (click)="navService.setCurrentSection('home')" 
+        mat-button >Home</a>
+        <a [routerLink]="['/about']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='about' ,'selected-section': (navService.getCurrentSection$() | async) =='about'}" 
          (click)="navService.setCurrentSection('about')" mat-button>About</a>
 
-        <a
+        <a [routerLink]="['/portofolio']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='portofolio' ,'selected-section': (navService.getCurrentSection$() | async) =='portofolio'}" 
          (click)="navService.setCurrentSection('portofolio')"  mat-button>Portofolio</a>
 
-        <a 
+        <a [routerLink]="['/contact']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='contact' ,'selected-section': (navService.getCurrentSection$() | async) =='contact'}" 
          (click)="navService.setCurrentSection('contact')"  mat-button>Hire me</a>
       </div>
@@ -38,17 +42,17 @@
     <mat-sidenav-container fxFlexFill class="example-container">
       <mat-sidenav #sidenav fxLayout="column" class="mobile-side-nav">
         <div fxLayout="column" >
-          <a (click)="sidenav.toggle()" routerLink="/" mat-button>Close</a>
-          <a (click)="navService.setCurrentSection('home')" mat-button>Home</a>
-          <a (click)="navService.setCurrentSection('about')" mat-button>About</a>
-          <a (click)="navService.setCurrentSection('portofolio')" mat-button>Portofolio</a>
-          <a (click)="navService.setCurrentSection('contact')" mat-button>Contact</a>
+          <a (click)="sidenav.toggle()"  mat-button>Close</a>
+          <a (click)="navService.setCurrentSection('home')" [routerLink]="['/home']" mat-button>Home</a>
+          <a (click)="navService.setCurrentSection('about')" [routerLink]="['/about']" mat-button>About</a>
+          <a (click)="navService.setCurrentSection('portofolio')" [routerLink]="['/portofolio']" mat-button>Portofolio</a>
+          <a (click)="navService.setCurrentSection('contact')" [routerLink]="['/contact']" mat-button>Contact</a>
           
         </div>
       </mat-sidenav>
       <mat-sidenav-content fxFlexFill>
 
-        <ng-content></ng-content>
+        <ng-content *ngIf='!show'></ng-content>
 
     </mat-sidenav-content>
     </mat-sidenav-container>

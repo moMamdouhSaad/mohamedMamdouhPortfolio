@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  private url = "http://localhost:4000/api/"
+  private url = "http://localhost:80/api/"
   constructor(private http: HttpClient) { }
 
   newProject(project){

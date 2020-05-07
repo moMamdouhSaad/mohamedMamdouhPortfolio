@@ -1,0 +1,111 @@
+.container{
+    height:calc(100vh - 75px);
+    width:100%;
+}
+#imgs-wrapper{
+    width: 100%;
+    text-align: center;
+}
+#imgs-wrapper img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin-bottom:10px
+
+}
+
+@media screen and (min-width: 901px) {
+
+    #title-wrapper{
+        margin-top:60px;
+        width: 100%;
+        text-align: left;
+    }
+
+    #project-title{
+        font-size: 25px;
+        color:rgba(44, 45, 53, 0.452);
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 5px;
+      }
+
+     #description-wrapper{
+        margin-top:20px;
+        margin-bottom:20px;
+        width:100%;
+        width: 100%;
+        text-align: left;
+     } 
+     #project-description{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        color:rgba(27, 27, 27, 0.884);
+
+     }
+
+
+  }
+  
+  @media screen and (max-width: 900px) {
+    
+    #title-wrapper{
+        margin-top:40px;
+        width: 100%;
+        text-align: center;
+    }
+    #project-title{
+        font-size: 25px;
+        color:rgba(44, 45, 53, 0.452);
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 5px;
+      }
+
+      #description-wrapper{
+        width:100%;
+        width: 100%;
+        text-align: center;
+        margin-top:15px;
+        margin-bottom:15px;
+     } 
+     #project-description{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        color:rgba(27, 27, 27, 0.884);
+     }
+  }   
+
+  @media screen and (max-width: 524px) {
+    #description-wrapper{
+        width:100%;
+        width: 100%;
+        text-align: center;
+        margin-top:10px;
+        margin-bottom:10px;
+        padding:5px
+     } 
+     #project-description{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        color:rgba(27, 27, 27, 0.884);
+        text-align: justify;
+
+     }
+    #title-wrapper{
+        margin-top:30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #project-title{
+        font-size: 25px;
+        color:rgba(44, 45, 53, 0.452);
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 5px;
+      }
+
+    #imgs-wrapper{
+        padding:15px
+    }  
+
+      }   
