@@ -71,7 +71,7 @@
   
   @media screen and (max-width: 900px) {
     .wrapper{
-        margin-top:90px;
+        margin-top:50px;
         text-align: center;
 
     }
@@ -103,8 +103,8 @@
           }
           #photo{
             vertical-align: middle;  
-            max-height: 85%;
-            max-width: 60%;
+            max-height: 100%;
+            max-width: 100%;
             width: auto;
             height: auto;
             position: absolute;

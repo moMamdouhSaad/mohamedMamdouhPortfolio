@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 export class NavService {
 
   constructor() { }
-  headerOpacity = new BehaviorSubject<boolean>(true);// true to make header with 0 opacity ( at top of website)
+  headerOpacity = new BehaviorSubject<boolean>(false);// true to make header with 0 opacity ( at top of website)
   currentSection:BehaviorSubject<string> = new BehaviorSubject<string>("home");
 
   setHeaderOpacity(value:boolean){

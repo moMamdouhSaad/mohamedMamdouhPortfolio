@@ -2,10 +2,20 @@
     text-align:center;
     width:100%;
 }
+.main-container{
+  background-image: url('/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
 .nav-section{
   font-family: "Lucida Console", Courier, monospace;
   font-size: 17px;
-
+}
+.nav-section:hover{
+  color:rgb(227,27,109);
 }
 .selected-section{
   font-family: "Lucida Console", Courier, monospace;
@@ -19,13 +29,23 @@
 }
 
 .toolbar{
-  background-color: rgb(44,45,53);
-  color:white;
+  background-color: rgba(44, 45, 53, 0.096);
+  color:rgb(255, 255, 255);
     height: 65px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-   
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0);
+
 }
+/* .toolbar:before{
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(10px);
+      background: inherit;
+
+} */
 @-webkit-keyframes fadeIn {
   from { opacity: 0; }
     to { opacity: 1; }
@@ -37,14 +57,14 @@
 .toolbarOpacity{
   width:100% ;
   height: 65px;
-  background-color: black;
+  background-color: rgb(2, 77, 151);
   overflow: hidden;
   border: none;  
-  color:rgb(167, 167, 167);
+  color:rgb(255, 255, 255);
   height: 65px;
 }
 .toolbar .selected-section{
-  background-color: rgba(37, 37, 37, 0.979);
+  background-color: rgba(37, 37, 37, 0.13);
 }
 .toolbarOpacity .menu-item-lg{
   color:rgb(204, 197, 197)
@@ -65,7 +85,8 @@
 
 
 @media screen and (min-width: 980px) {
-  .toolbarOpacity{
+
+  /* .toolbarOpacity{
     width:calc(100% - 10px) ;
     height: 65px;
     background-color: rgb(3, 3, 3);
@@ -73,7 +94,7 @@
     border: none;  
     color:rgb(167, 167, 167);
     height: 65px;
-  } 
+  }  */
 }
 
 
@@ -81,7 +102,7 @@
     .mm-container {
       font-size: 20px;
       font-family: "Lucida Console", Courier, monospace;
-
+      color: rgb(255, 255, 255)
     }
   }
   
@@ -89,6 +110,8 @@
     .mm-container {
       font-size: 15px;
       font-family: "Lucida Console", Courier, monospace;
+      color: rgb(255, 255, 255)
+
 
     }
   }

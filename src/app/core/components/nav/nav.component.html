@@ -3,32 +3,43 @@
 <div class="main-container">
     <mat-toolbar style="position: relative"  [ngClass]="{'toolbarOpacity': (navService.getHeaderOpacity$() | async) === true, 'toolbar':(navService.getHeaderOpacity$() | async) === false }">
       <div class="stars-wrappers" *ngIf="(navService.getHeaderOpacity$() | async) === true">
-      <div id='stars'></div>
+      <!-- <div id='stars'></div>
      <div id='stars2'></div>
-     <div id='stars3'></div>
+     <div id='stars3'></div> -->
     </div>
       <a  mat-button>
          <span [routerLink]="['/home']" 
-         (click)="navService.setCurrentSection('home')" class="mm-container"> Mohamed Mamdsouh </span> </a>
+         (click)="navService.setCurrentSection('home')" class="mm-container"> Mohamed Mamdouh </span> </a>
    
       <span class="example-spacer"></span>
   <div class="menu-items-lg">
       <div fxShow="true" fxHide.lt-md="true">        
         <a [routerLink]="['/home']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='home' ,'selected-section': (navService.getCurrentSection$() | async) =='home'}" 
+        (click)="setToolbarOpacity(false)" 
         (click)="navService.setCurrentSection('home')" 
+
         mat-button >Home</a>
         <a [routerLink]="['/about']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='about' ,'selected-section': (navService.getCurrentSection$() | async) =='about'}" 
-         (click)="navService.setCurrentSection('about')" mat-button>About</a>
+        (click)="setToolbarOpacity(true)"
+        (click)="navService.setCurrentSection('about')" 
+
+          mat-button>About</a>
 
         <a [routerLink]="['/portofolio']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='portofolio' ,'selected-section': (navService.getCurrentSection$() | async) =='portofolio'}" 
-         (click)="navService.setCurrentSection('portofolio')"  mat-button>Portofolio</a>
+        (click)="setToolbarOpacity(true)"
+        (click)="navService.setCurrentSection('portofolio')" 
+
+           mat-button>Portofolio</a>
 
         <a [routerLink]="['/contact']"
         [ngClass]="{'nav-section':(navService.getCurrentSection$() | async) !='contact' ,'selected-section': (navService.getCurrentSection$() | async) =='contact'}" 
-         (click)="navService.setCurrentSection('contact')"  mat-button>Hire me</a>
+        (click)="setToolbarOpacity(true)"
+        (click)="navService.setCurrentSection('contact')" 
+
+           mat-button>Contact me</a>
       </div>
     </div>
       <div class="show-side-menu-btn" fxShow="true" fxHide.gt-sm="true">
@@ -43,10 +54,21 @@
       <mat-sidenav #sidenav fxLayout="column" class="mobile-side-nav">
         <div fxLayout="column" >
           <a (click)="sidenav.toggle()"  mat-button>Close</a>
-          <a (click)="navService.setCurrentSection('home')" [routerLink]="['/home']" mat-button>Home</a>
-          <a (click)="navService.setCurrentSection('about')" [routerLink]="['/about']" mat-button>About</a>
-          <a (click)="navService.setCurrentSection('portofolio')" [routerLink]="['/portofolio']" mat-button>Portofolio</a>
-          <a (click)="navService.setCurrentSection('contact')" [routerLink]="['/contact']" mat-button>Contact</a>
+          <a 
+          (click)="navService.setCurrentSection('home')"
+          (click)="setToolbarOpacity(false)" 
+          [routerLink]="['/home']" mat-button>Home</a>
+
+          <a
+           (click)="navService.setCurrentSection('about')"
+           (click)="setToolbarOpacity(true)" 
+           [routerLink]="['/about']" mat-button>About</a>
+          <a
+          (click)="setToolbarOpacity(true)" 
+          (click)="navService.setCurrentSection('portofolio')" [routerLink]="['/portofolio']" mat-button>Portofolio</a>
+          <a 
+          (click)="setToolbarOpacity(true)" 
+          (click)="navService.setCurrentSection('contact')" [routerLink]="['/contact']" mat-button>Contact</a>
           
         </div>
       </mat-sidenav>

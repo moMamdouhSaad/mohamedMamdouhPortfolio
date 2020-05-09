@@ -24,7 +24,9 @@
         <mat-error *ngIf="contactFormGroup.get('content').invalid">Content invalid</mat-error>
       </mat-form-field>
       <br>
-      <button (click)="submitContact()" mat-button> Submit form</button>
+      <br>
+
+      <button (click)="submitContact()" color='primary' mat-flat-button> Submit message</button>
 
     </form> 
 </div>
